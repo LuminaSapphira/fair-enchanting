@@ -32,7 +32,6 @@ public abstract class PlayerMixin extends LivingEntity {
 
 	@Inject(at = @At("HEAD"), method = "applyEnchantmentCosts", cancellable = true)
 	private void modifyEnchantmentCost(ItemStack enchantedItem, int experienceLevels, CallbackInfo info) {
-		System.out.println("here");
 		if (container instanceof EnchantingTableContainer) {
 			FairEnchanting.logger.debug("FairEnchanting Replacing level cost");
 			int costLevel = ((EnchantingTableContainer) container).enchantmentPower[experienceLevels - 1];
