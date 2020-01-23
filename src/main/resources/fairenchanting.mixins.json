@@ -1,11 +1,10 @@
 {
   "required": true,
-  "package": "net.fabricmc.example.mixin",
+  "package": "net.cerulan.fairenchanting.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

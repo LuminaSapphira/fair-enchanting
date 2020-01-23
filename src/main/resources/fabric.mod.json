@@ -1,37 +1,33 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fairenchanting",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "FairEnchanting",
+  "description": "Makes the experience cost on the Enchanting Table standard even if your level is higher than the required level.",
   "authors": [
-    "Me!"
+    "CerulanLumina"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/CerulanLumina/fair-enchanting"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/fairenchanting/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.cerulan.fairenchanting.FairEnchanting"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "fairenchanting.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.2",
     "fabric": "*",
     "minecraft": "1.15.x"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }
