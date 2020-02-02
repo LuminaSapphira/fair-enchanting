@@ -3,7 +3,8 @@
   "package": "net.cerulan.fairenchanting.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "PlayerMixin"
+    "PlayerMixin",
+    "MixinAnvilContainerResultSlot"
   ],
   "client": [
   ],

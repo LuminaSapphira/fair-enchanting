@@ -1,6 +1,8 @@
 package net.cerulan.fairenchanting;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.crash.CrashException;
+import net.minecraft.util.crash.CrashReport;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,6 +17,10 @@ public class FairEnchanting implements ModInitializer {
 	}
 
 	public static int getExperienceCostAtLevel(int startLevel, int levelCost) {
+		if (levelCost < 0 || startLevel < 0)
+			throw new CrashException(CrashReport.create(
+					new RuntimeException("Value cannot be negative"),
+					"Calculating experience using negative value"));
 		int cost = 0;
 		for (int i = startLevel; i > startLevel - levelCost; --i) {
 			cost += getSingleLevelCost(i);
