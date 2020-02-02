@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(targets = "net/minecraft/container/AnvilContainer$2")
 public class MixinAnvilContainerResultSlot {
 
-    @Redirect(method = "onTakeItem", require = 1,
+    @Redirect(method = "onTakeItem(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;", require = 1,
     at = @At(value = "INVOKE", target = "net.minecraft.entity.player.PlayerEntity.addExperienceLevels(I)V"))
     private void addExperienceLevels(PlayerEntity playerEntity, int levels) {
         int levelCost = -levels;
