@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "net.cerulan.fairenchanting.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
     "PlayerMixin",
     "MixinAnvilScreenHandler"
